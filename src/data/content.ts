@@ -19,7 +19,7 @@ const IMG = {
   hamburguesa:
     "https://image.qwenlm.ai/generated-images/8c3c9524-23b8-4464-b848-4947671b617d/_result.png",
   tostones:
-    "https://image.qwenlm.ai/generated-images/51441b7d-30ba-4267-944e-1a7aefb2b071/_result.png",
+    "https://image.qwenlm.ai/generated-images/51441b7b-30ba-4267-944e-1a7aefb2b071/_result.png",
   yaroa: "https://image.qwenlm.ai/generated-images/4f32beee-c8d3-4c91-9a82-fafa56f18b20/_result.png",
 };
 
