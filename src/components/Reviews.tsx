@@ -23,7 +23,7 @@ export default function Reviews() {
       <div className="relative mx-auto max-w-7xl px-5">
         <Reveal>
           <p className="mb-3 inline-block -rotate-2 font-marker text-lg text-oro">el barrio habla</p>
-          <h2 className="mb-14 font-display text-5xl leading-[0.92] tracking-wide md:text-7xl">
+          <h2 className="mb-14 font-display text-4xl leading-[0.92] tracking-wide sm:text-5xl md:text-7xl">
             LO QUE DICEN <span className="text-fuego">DE NOSOTROS</span>
           </h2>
         </Reveal>
@@ -33,7 +33,7 @@ export default function Reviews() {
           <Reveal className="lg:col-span-5">
             <div className="h-full rounded-[24px] border border-crema/10 bg-coal p-7 md:p-9">
               <div className="flex items-end gap-5">
-                <span className="font-display text-[92px] leading-none text-crema">{RATING}</span>
+                <span className="font-display text-6xl leading-none text-crema sm:text-8xl md:text-[92px]">{RATING}</span>
                 <div className="pb-2">
                   <div className="flex gap-1">
                     {Array.from({ length: 5 }).map((_, i) => (

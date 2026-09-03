@@ -13,7 +13,7 @@ export default function Pizarra() {
               <p className="mb-3 inline-block -rotate-2 font-marker text-lg text-oro">
                 el menú completo
               </p>
-              <h2 className="font-display leading-[0.9] tracking-wide text-7xl md:text-8xl">
+              <h2 className="font-display leading-[0.9] tracking-wide text-6xl sm:text-7xl md:text-8xl">
                 <span className="block">LA</span>
                 <span className="block text-outline">PIZARRA</span>
               </h2>

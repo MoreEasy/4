@@ -22,14 +22,14 @@ export default function Footer() {
         <div className="grid gap-12 lg:grid-cols-12">
           <Reveal className="lg:col-span-6">
             <p className="inline-block -rotate-2 font-marker text-lg text-oro">no digas que no te avisamos</p>
-            <p className="mt-3 font-display leading-[0.9] tracking-wide text-6xl md:text-8xl">
+            <p className="mt-3 font-display leading-[0.9] tracking-wide text-5xl sm:text-6xl md:text-8xl">
               ¿SE TE
               <br />
               <span className="text-outline">ANTOJÓ?</span>
             </p>
             <a
               href={PHONE_TEL}
-              className="group mt-8 inline-flex items-center gap-4 font-display text-3xl tracking-wide text-oro transition-colors hover:text-fuego md:text-5xl"
+              className="group mt-8 inline-flex flex-wrap items-center gap-x-4 gap-y-2 font-display text-2xl tracking-wide text-oro transition-colors hover:text-fuego sm:text-3xl md:text-5xl"
             >
               <PhoneIcon className="h-8 w-8 md:h-10 md:w-10" />
               {PHONE_DISPLAY}

@@ -32,7 +32,7 @@ export default function Featured() {
               <p className="mb-3 inline-block -rotate-2 font-marker text-lg text-oro">
                 los favoritos de la casa
               </p>
-              <h2 className="font-display text-5xl leading-[0.92] tracking-wide md:text-7xl">
+              <h2 className="font-display text-4xl leading-[0.92] tracking-wide sm:text-5xl md:text-7xl">
                 LOS QUE MANDAN <span className="text-fuego">AQUÍ</span>
               </h2>
             </div>

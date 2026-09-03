@@ -24,7 +24,7 @@ export default function SpiceMeter() {
           <p className="mb-3 inline-block rotate-[-2deg] font-marker text-lg text-oro">
             el termómetro de la casa
           </p>
-          <h2 className="font-display text-5xl leading-[0.92] tracking-wide md:text-7xl">
+          <h2 className="font-display text-4xl leading-[0.92] tracking-wide sm:text-5xl md:text-7xl">
             ¿CUÁNTO <span className="text-fuego">AGUANTAS?</span>
           </h2>
           <p className="mt-6 max-w-md text-base leading-relaxed text-humo">
@@ -74,7 +74,7 @@ export default function SpiceMeter() {
                       background: isCurrent ? `${s.color}1f` : "transparent",
                     }}
                   >
-                    <Chili className="h-8 w-8 md:h-10 md:w-10" off={!active} />
+                    <Chili className="h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10" off={!active} />
                   </button>
                 );
               })}
@@ -82,7 +82,7 @@ export default function SpiceMeter() {
 
             <div className="mt-7">
               <p
-                className="font-display text-4xl tracking-wide transition-colors duration-500 md:text-5xl"
+                className="font-display text-[1.75rem] tracking-wide transition-colors duration-500 sm:text-4xl md:text-5xl"
                 style={{ color: current.color }}
               >
                 {current.name.toUpperCase()}
