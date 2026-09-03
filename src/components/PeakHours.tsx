@@ -48,7 +48,7 @@ export default function PeakHours() {
               {peakHours.map((p, i) => (
                 <div key={p.h} className="group relative flex h-full flex-1 items-end">
                   {/* tooltip */}
-                  <span className="pointer-events-none absolute -top-1 left-1/2 z-10 -translate-x-1/2 -translate-y-full whitespace-nowrap rounded-md bg-crema px-2.5 py-1 text-[10px] font-extrabold text-carbon opacity-0 shadow-lg transition-opacity duration-300 group-hover:opacity-100">
+                  <span className="pointer-events-none absolute -top-1 left-1/2 z-10 hidden -translate-x-1/2 -translate-y-full whitespace-nowrap rounded-md bg-crema px-2.5 py-1 text-[10px] font-extrabold text-carbon opacity-0 shadow-lg transition-opacity duration-300 group-hover:opacity-100 sm:block">
                     {hourLabel(p.h)} · {p.v}% del pico
                   </span>
                   <div

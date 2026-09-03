@@ -211,6 +211,16 @@ body {
   transition-delay: var(--d, 0ms);
 }
 
+/* ---- review postcards: rotation shrinks on small screens ---- */
+.postcard {
+  transform: rotate(var(--rot, 0deg));
+}
+@media (max-width: 767px) {
+  .postcard {
+    transform: rotate(calc(var(--rot, 0deg) * 0.45));
+  }
+}
+
 /* ---- dotted price leaders ---- */
 .dots {
   flex: 1;
@@ -255,7 +265,8 @@ body {
   }
   .reveal,
   .mask-inner,
-  .grow-x {
+  .grow-x,
+  .postcard {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;

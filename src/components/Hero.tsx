@@ -152,7 +152,7 @@ export default function Hero() {
         <div className="lg:col-span-5">
           <Reveal delay={250} className="relative mx-auto max-w-[430px]">
             {/* spinning badge */}
-            <div className="absolute -top-12 -left-6 md:-left-14 z-20 h-27 w-27 text-oro">
+            <div className="absolute -top-12 -left-1 z-20 h-27 w-27 text-oro sm:-left-6 md:-left-14">
               <svg viewBox="0 0 120 120" className="h-full w-full animate-spin-slow">
                 <defs>
                   <path id="hero-circ" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0" />

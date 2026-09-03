@@ -11,7 +11,10 @@ import {
 
 export default function Reviews() {
   return (
-    <section id="opiniones" className="relative scroll-mt-24 border-t border-crema/10 py-24 md:py-32">
+    <section
+      id="opiniones"
+      className="relative scroll-mt-24 overflow-hidden border-t border-crema/10 py-24 md:py-32"
+    >
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0"
@@ -30,14 +33,14 @@ export default function Reviews() {
 
         <div className="grid gap-10 lg:grid-cols-12">
           {/* summary */}
-          <Reveal className="lg:col-span-5">
+          <Reveal className="min-w-0 lg:col-span-5">
             <div className="h-full rounded-[24px] border border-crema/10 bg-coal p-7 md:p-9">
-              <div className="flex items-end gap-5">
+              <div className="flex items-end gap-4 sm:gap-5">
                 <span className="font-display text-6xl leading-none text-crema sm:text-8xl md:text-[92px]">{RATING}</span>
-                <div className="pb-2">
+                <div className="min-w-0 pb-2">
                   <div className="flex gap-1">
                     {Array.from({ length: 5 }).map((_, i) => (
-                      <Star key={i} className="h-5 w-5 text-oro" />
+                      <Star key={i} className="h-4 w-4 sm:h-5 sm:w-5 text-oro" />
                     ))}
                   </div>
                   <p className="mt-2 text-sm font-bold text-humo">
@@ -84,12 +87,13 @@ export default function Reviews() {
           </Reveal>
 
           {/* postcards */}
-          <div className="flex flex-col gap-8 lg:col-span-7">
+          <div className="min-w-0 lg:col-span-7">
+            <div className="flex max-w-full flex-col gap-8">
             {reviews.map((r, i) => (
-              <Reveal key={r.name} delay={i * 130} className={i === 1 ? "lg:ml-10" : i === 2 ? "lg:mr-6" : ""}>
+              <Reveal key={r.name} delay={i * 130} className="max-w-full px-1 sm:px-0">
                 <article
-                  className="group rounded-xl bg-crema p-6 text-carbon shadow-[0_30px_60px_-28px_rgba(0,0,0,.85)] transition-transform duration-500 hover:-translate-y-1.5 md:p-7"
-                  style={{ transform: `rotate(${r.rotate})` }}
+                  className="postcard group w-full max-w-full rounded-xl bg-crema p-6 text-carbon shadow-[0_30px_60px_-28px_rgba(0,0,0,.85)] transition-transform duration-500 hover:-translate-y-1.5 md:p-7"
+                  style={{ "--rot": r.rotate } as CSSProperties}
                 >
                   <div className="flex items-start gap-3.5">
                     <span
@@ -137,6 +141,7 @@ export default function Reviews() {
                 <Arrow className="h-4 w-4" />
               </a>
             </Reveal>
+            </div>
           </div>
         </div>
       </div>
