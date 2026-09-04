@@ -1,5 +1,5 @@
 import Reveal from "./Reveal";
-import { Arrow, Chili, PhoneIcon, Spark } from "./icons";
+import { Arrow, Chili, PhoneIcon } from "./icons";
 import { pizarra, PHONE_DISPLAY, PHONE_TEL } from "../data/content";
 
 export default function Pizarra() {
@@ -8,7 +8,7 @@ export default function Pizarra() {
       <div className="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-12">
         {/* sticky intro */}
         <div className="lg:col-span-4">
-          <div className="text-center lg:sticky lg:top-28 lg:text-left">
+          <div className="text-center lg:sticky lg:top-28">
             <Reveal>
               <p className="mb-3 inline-block -rotate-2 font-marker text-lg text-oro">
                 el menú completo
@@ -17,13 +17,14 @@ export default function Pizarra() {
                 <span className="block">LA</span>
                 <span className="block text-outline">PIZARRA</span>
               </h2>
-              <p className="mx-auto mt-6 max-w-xs text-sm leading-relaxed text-humo lg:mx-0">
-                Todo lo que sale de la cocina, con precios en pesos dominicanos. Si no está aquí,
-                pregúntale al muchacho del mostrador — casi seguro lo conseguimos.
+              <p className="mx-auto mt-6 max-w-xs text-sm leading-relaxed text-humo">
+                Mofongos, supremas, hamburguesas, tacos, picalongas, postres y más de 80 antojos,
+                todos con precios en pesos dominicanos. Si no lo ves aquí, pregúntale al muchacho
+                del mostrador — casi seguro lo conseguimos.
               </p>
 
               {/* spice legend */}
-              <div className="mx-auto mt-8 w-fit space-y-2.5 border-l-2 border-fuego/50 pl-4 text-left lg:mx-0">
+              <div className="mx-auto mt-8 w-fit space-y-2.5 border-l-2 border-fuego/50 pl-4 text-left">
                 {[
                   { n: 1, t: "Suave — sabor sin susto" },
                   { n: 2, t: "Medio — calienta bonito" },
@@ -42,7 +43,7 @@ export default function Pizarra() {
 
               <a
                 href={PHONE_TEL}
-                className="group mx-auto mt-9 flex w-fit items-center gap-3 rounded-full bg-fuego px-6 py-3.5 font-extrabold text-crema shadow-[0_14px_36px_-10px_rgba(255,77,36,.6)] transition-all duration-300 hover:bg-brasa hover:-translate-y-0.5 lg:mx-0"
+                className="group mx-auto mt-9 flex w-fit items-center gap-3 rounded-full bg-fuego px-6 py-3.5 font-extrabold text-crema shadow-[0_14px_36px_-10px_rgba(255,77,36,.6)] transition-all duration-300 hover:bg-brasa hover:-translate-y-0.5"
               >
                 <PhoneIcon className="h-4.5 w-4.5" />
                 {PHONE_DISPLAY}
@@ -59,15 +60,15 @@ export default function Pizarra() {
         <div className="lg:col-span-8">
           {pizarra.map((cat, ci) => (
             <Reveal key={cat.title} delay={ci * 70} className={ci > 0 ? "mt-12" : ""}>
-              <h3 className="mb-2 flex items-center gap-3 font-display text-2xl uppercase tracking-[0.06em] text-oro md:text-3xl">
-                <Spark className="h-4 w-4 text-fuego" />
+              <h3 className="mb-2 flex items-center justify-center gap-3 text-center font-display text-2xl uppercase tracking-[0.06em] text-oro md:text-3xl">
+                <Chili className="h-5 w-5 shrink-0 text-fuego" />
                 {cat.title}
               </h3>
               <ul>
                 {cat.items.map((item, ii) => (
                   <li
                     key={ii}
-                    className="group flex items-baseline border-b border-crema/5 py-3.5 transition-colors hover:border-fuego/30"
+                    className="group mx-auto flex w-full max-w-2xl items-baseline border-b border-crema/5 py-3.5 transition-colors hover:border-fuego/30"
                   >
                     <span className="font-bold text-[15px] text-crema transition-colors duration-300 group-hover:text-oro">
                       {item.name}
@@ -94,7 +95,7 @@ export default function Pizarra() {
           ))}
 
           <Reveal delay={200}>
-            <p className="mt-10 rounded-xl border border-dashed border-crema/20 bg-crema/[0.03] p-4 text-xs leading-relaxed text-ceniza">
+            <p className="mx-auto mt-10 max-w-2xl rounded-xl border border-dashed border-crema/20 bg-crema/[0.03] p-4 text-center text-xs leading-relaxed text-ceniza">
               Precios en RD$, sujetos a cambio sin previo aviso. El picante va por tu cuenta: la
               escala va de <span className="font-bold text-humo">suavecito</span> a{" "}
               <span className="font-bold text-fuego">modo dragón</span>. Menú disponible para
