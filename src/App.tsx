@@ -3,6 +3,7 @@ import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import Ticker from "./components/Ticker";
 import Featured from "./components/Featured";
+import Mofongo from "./components/Mofongo";
 import SpiceMeter from "./components/SpiceMeter";
 import Pizarra from "./components/Pizarra";
 import PeakHours from "./components/PeakHours";
@@ -50,6 +51,7 @@ export default function App() {
         <Hero />
         <Ticker items={marqueeItems} />
         <Featured />
+        <Mofongo />
         <SpiceMeter />
         <Pizarra />
         <PeakHours />

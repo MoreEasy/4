@@ -4,6 +4,7 @@ import { PHONE_DISPLAY, PHONE_TEL } from "../data/content";
 
 const links = [
   { label: "El Menú", href: "#menu" },
+  { label: "Mofongo", href: "#mofongo" },
   { label: "La Pizarra", href: "#pizarra" },
   { label: "Opiniones", href: "#opiniones" },
   { label: "Visítanos", href: "#ubicacion" },

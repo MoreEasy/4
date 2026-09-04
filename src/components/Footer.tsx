@@ -47,6 +47,7 @@ export default function Footer() {
               <ul className="mt-4 space-y-2.5 text-sm font-semibold text-humo">
                 {[
                   { l: "Los destacados", h: "#menu" },
+                  { l: "El reino del mofongo", h: "#mofongo" },
                   { l: "La pizarra", h: "#pizarra" },
                   { l: "Nivel de picante", h: "#picante" },
                   { l: "Horarios", h: "#horarios" },

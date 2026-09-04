@@ -21,6 +21,16 @@ const IMG = {
   tostones:
     "https://image.qwenlm.ai/generated-images/51441b7b-30ba-4267-944e-1a7aefb2b071/_result.png",
   yaroa: "https://image.qwenlm.ai/generated-images/4f32beee-c8d3-4c91-9a82-fafa56f18b20/_result.png",
+  mofongoRes:
+    "https://image.qwenlm.ai/generated-images/0aed6bd6-3aac-41af-b297-7c5037e523ed/_result.png",
+  mofongoLonganiza:
+    "https://image.qwenlm.ai/generated-images/a1d4923a-3438-4ebc-8f36-72814f1d7306/_result.png",
+  mofongoCamarones:
+    "https://image.qwenlm.ai/generated-images/0a64fbae-5775-4bce-8ea7-b7770c0d0d6c/_result.png",
+  mofongoPollo:
+    "https://image.qwenlm.ai/generated-images/ead87dec-82ee-4cca-91d6-b1a24dd7efa5/_result.png",
+  mofongoDosPorUno:
+    "https://image.qwenlm.ai/generated-images/7db91a14-e747-40d6-83df-45fbf4adffa2/_result.png",
 };
 
 export type FeaturedDish = {
@@ -91,6 +101,94 @@ export const featured: FeaturedDish[] = [
     spice: 1,
     spiceLabel: "Dulzona",
     img: IMG.yaroa,
+  },
+];
+
+export type MofongoDish = {
+  id: string;
+  name: string;
+  desc: string;
+  price: number;
+  spice: 0 | 1 | 2 | 3 | 4 | 5;
+  spiceLabel: string;
+  tag?: string;
+  img: string;
+};
+
+export const mofongos: MofongoDish[] = [
+  {
+    id: "mofongo-mixto",
+    name: "Mofongo Mixto",
+    desc: "Mofongo tradicional de plátano verde acompañado de pollo y cerdo. El más completo de la casa.",
+    price: 890,
+    spice: 2,
+    spiceLabel: "Con carácter",
+    tag: "El más completo",
+    img: IMG.mofongoPollo,
+  },
+  {
+    id: "mofongo-cerdo",
+    name: "Mofongo de Cerdo",
+    desc: "Mofongo tradicional de plátano verde acompañado de cerdo.",
+    price: 830,
+    spice: 2,
+    spiceLabel: "Con carácter",
+    img: IMG.mofongo,
+  },
+  {
+    id: "mofongo-res",
+    name: "Mofongo de Res al Ajillo",
+    desc: "Mofongo tradicional de plátano verde acompañado de res al ajillo.",
+    price: 800,
+    spice: 2,
+    spiceLabel: "Con carácter",
+    img: IMG.mofongoRes,
+  },
+  {
+    id: "mofongo-camarones",
+    name: "Mofongo de Camarones",
+    desc: "Mofongo tradicional de plátano verde acompañado de camarones.",
+    price: 850,
+    spice: 2,
+    spiceLabel: "Con carácter",
+    img: IMG.mofongoCamarones,
+  },
+  {
+    id: "mofongo-2x1",
+    name: "Mofongo 2x1",
+    desc: "Pollo o cerdo. Dos mofongos bien servidos para compartir en pareja.",
+    price: 780,
+    spice: 2,
+    spiceLabel: "Con carácter",
+    tag: "Para compartir",
+    img: IMG.mofongoDosPorUno,
+  },
+  {
+    id: "mofongo-alitas",
+    name: "Mofongo de Alitas",
+    desc: "Mofongo tradicional de plátano verde acompañado de alitas.",
+    price: 810,
+    spice: 3,
+    spiceLabel: "Pica rico",
+    img: IMG.mofongoPollo,
+  },
+  {
+    id: "mofongo-pollo",
+    name: "Mofongo de Pollo",
+    desc: "Mofongo tradicional de plátano verde con pollo.",
+    price: 650,
+    spice: 1,
+    spiceLabel: "Suave",
+    img: IMG.mofongoPollo,
+  },
+  {
+    id: "mofongo-longaniza",
+    name: "Mofongo de Longaniza",
+    desc: "Mofongo tradicional de plátano verde acompañado de longaniza frita.",
+    price: 535,
+    spice: 2,
+    spiceLabel: "Con carácter",
+    img: IMG.mofongoLonganiza,
   },
 ];
 
