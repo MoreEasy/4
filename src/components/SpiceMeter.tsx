@@ -42,7 +42,7 @@ export default function SpiceMeter() {
 
         <Reveal delay={150}>
           <div className="relative rounded-[24px] border border-crema/10 bg-carbon p-7 md:p-10">
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-center gap-4 sm:justify-between sm:gap-0">
               <p className="text-xs font-extrabold uppercase tracking-[0.22em] text-ceniza">
                 Tu nivel de picante
               </p>

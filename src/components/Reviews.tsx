@@ -90,7 +90,7 @@ export default function Reviews() {
           <div className="min-w-0 lg:col-span-7">
             <div className="flex max-w-full flex-col gap-8">
             {reviews.map((r, i) => (
-              <Reveal key={r.name} delay={i * 130} className="max-w-full px-1 sm:px-0">
+              <Reveal key={r.name} delay={i * 130} className="max-w-full">
                 <article
                   className="postcard group w-full max-w-full rounded-xl bg-crema p-6 text-carbon shadow-[0_30px_60px_-28px_rgba(0,0,0,.85)] transition-transform duration-500 hover:-translate-y-1.5 md:p-7"
                   style={{ "--rot": r.rotate } as CSSProperties}

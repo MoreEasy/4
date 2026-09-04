@@ -211,13 +211,13 @@ body {
   transition-delay: var(--d, 0ms);
 }
 
-/* ---- review postcards: rotation shrinks on small screens ---- */
+/* ---- review postcards: straight on phones, tilted from sm up ---- */
 .postcard {
-  transform: rotate(var(--rot, 0deg));
+  transform: none;
 }
-@media (max-width: 767px) {
+@media (min-width: 640px) {
   .postcard {
-    transform: rotate(calc(var(--rot, 0deg) * 0.45));
+    transform: rotate(var(--rot, 0deg));
   }
 }
 
