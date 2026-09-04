@@ -23,7 +23,7 @@ function SpiceRow({ level, label }: { level: number; label: string }) {
 
 export default function Featured() {
   return (
-    <section id="menu" className="relative scroll-mt-24 py-24 md:py-32">
+    <section id="menu" className="relative scroll-mt-24 overflow-hidden py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-5">
         {/* header */}
         <Reveal>
@@ -57,7 +57,7 @@ export default function Featured() {
             <Reveal key={dish.id} delay={(i % 3) * 120}>
               <article
                 className={`group relative h-full overflow-hidden rounded-[20px] border border-crema/10 bg-coal transition-all duration-500 hover:-translate-y-2 hover:border-fuego/50 hover:shadow-[0_28px_70px_-24px_rgba(255,77,36,.4)] ${
-                  i % 2 === 0 ? "rotate-[0.6deg]" : "-rotate-[0.6deg]"
+                  i % 2 === 0 ? "lg:rotate-[0.6deg]" : "lg:-rotate-[0.6deg]"
                 } hover:rotate-0`}
               >
                 <div className="relative aspect-[4/3] overflow-hidden bg-lena">
@@ -83,7 +83,7 @@ export default function Featured() {
                     {dish.name}
                   </h3>
                   <p className="mt-2 flex-1 text-center text-sm leading-relaxed text-humo lg:text-left">{dish.desc}</p>
-                  <div className="mt-5 flex items-center justify-between border-t border-crema/10 pt-4">
+                  <div className="mt-5 flex flex-col items-center gap-3 border-t border-crema/10 pt-4 lg:flex-row lg:justify-between">
                     <SpiceRow level={dish.spice} label={dish.spiceLabel} />
                     <a
                       href={PHONE_TEL}
