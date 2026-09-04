@@ -27,7 +27,7 @@ export default function Featured() {
       <div className="mx-auto max-w-7xl px-5">
         {/* header */}
         <Reveal>
-          <div className="mb-14 flex flex-col justify-between gap-8 text-center md:mb-16 md:flex-row md:items-end md:text-left">
+          <div className="mb-14 flex flex-col justify-between gap-8 text-center md:mb-16 lg:flex-row lg:items-end lg:text-left">
             <div>
               <p className="mb-3 inline-block -rotate-2 font-marker text-lg text-oro">
                 los favoritos de la casa
@@ -36,7 +36,7 @@ export default function Featured() {
                 LOS QUE MANDAN <span className="text-fuego">AQUÍ</span>
               </h2>
             </div>
-            <div className="mx-auto max-w-sm md:mx-0">
+            <div className="mx-auto max-w-sm lg:mx-0">
               <p className="text-sm leading-relaxed text-humo">
                 Seis razones por las que el barrio vuelve una y otra vez. Todo se prepara al momento
                 y al nivel de picante que tú pidas.
@@ -79,10 +79,10 @@ export default function Featured() {
                 </div>
 
                 <div className="flex flex-col p-5 md:p-6">
-                  <h3 className="text-center font-display text-[22px] leading-tight tracking-wide text-crema sm:text-left">
+                  <h3 className="text-center font-display text-[22px] leading-tight tracking-wide text-crema lg:text-left">
                     {dish.name}
                   </h3>
-                  <p className="mt-2 flex-1 text-center text-sm leading-relaxed text-humo sm:text-left">{dish.desc}</p>
+                  <p className="mt-2 flex-1 text-center text-sm leading-relaxed text-humo lg:text-left">{dish.desc}</p>
                   <div className="mt-5 flex items-center justify-between border-t border-crema/10 pt-4">
                     <SpiceRow level={dish.spice} label={dish.spiceLabel} />
                     <a

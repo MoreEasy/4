@@ -215,7 +215,7 @@ body {
 .postcard {
   transform: none;
 }
-@media (min-width: 640px) {
+@media (min-width: 1024px) {
   .postcard {
     transform: rotate(var(--rot, 0deg));
   }

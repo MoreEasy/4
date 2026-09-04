@@ -42,7 +42,7 @@ export default function Footer() {
           </Reveal>
 
           <div className="grid gap-10 sm:grid-cols-3 lg:col-span-6">
-            <Reveal delay={100} className="text-center sm:text-left">
+            <Reveal delay={100} className="text-center lg:text-left">
               <h3 className="font-display text-lg tracking-widest text-fuego">MENÚ</h3>
               <ul className="mt-4 space-y-2.5 text-sm font-semibold text-humo">
                 {[
@@ -59,7 +59,7 @@ export default function Footer() {
                 ))}
               </ul>
             </Reveal>
-            <Reveal delay={180} className="text-center sm:text-left">
+            <Reveal delay={180} className="text-center lg:text-left">
               <h3 className="font-display text-lg tracking-widest text-fuego">HORARIO</h3>
               <ul className="mt-4 space-y-2.5 text-sm font-semibold text-humo">
                 <li>Lunes a Domingo</li>
@@ -67,22 +67,22 @@ export default function Footer() {
                 <li className="text-xs text-ceniza">Cierra a las 12 a.m. en punto… casi siempre.</li>
               </ul>
             </Reveal>
-            <Reveal delay={260} className="text-center sm:text-left">
+            <Reveal delay={260} className="text-center lg:text-left">
               <h3 className="font-display text-lg tracking-widest text-fuego">CONTACTO</h3>
               <ul className="mt-4 space-y-3.5 text-sm font-semibold text-humo">
-                <li className="flex items-start justify-center gap-2.5 sm:justify-start">
+                <li className="flex items-start justify-center gap-2.5 lg:justify-start">
                   <Pin className="mt-0.5 h-4 w-4 shrink-0 text-fuego" />
                   <a href={MAPS_URL} target="_blank" rel="noreferrer" className="link-line hover:text-crema">
                     {ADDRESS}
                   </a>
                 </li>
-                <li className="flex items-start justify-center gap-2.5 sm:justify-start">
+                <li className="flex items-start justify-center gap-2.5 lg:justify-start">
                   <PhoneIcon className="mt-0.5 h-4 w-4 shrink-0 text-fuego" />
                   <a href={PHONE_TEL} className="link-line hover:text-crema">
                     {PHONE_DISPLAY}
                   </a>
                 </li>
-                <li className="flex items-start justify-center gap-2.5 sm:justify-start">
+                <li className="flex items-start justify-center gap-2.5 lg:justify-start">
                   <Instagram className="mt-0.5 h-4 w-4 shrink-0 text-fuego" />
                   <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="link-line hover:text-crema">
                     {INSTAGRAM_HANDLE}

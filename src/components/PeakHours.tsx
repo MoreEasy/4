@@ -22,7 +22,7 @@ export default function PeakHours() {
     <section id="horarios" className="scroll-mt-24 border-t border-crema/10 py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-5">
         <Reveal>
-          <div className="mb-12 flex flex-col justify-between gap-8 text-center md:flex-row md:items-end md:text-left">
+          <div className="mb-12 flex flex-col justify-between gap-8 text-center lg:flex-row lg:items-end lg:text-left">
             <div>
               <p className="mb-3 inline-block rotate-[-2deg] font-marker text-lg text-oro">
                 planifica tu antojo
@@ -31,7 +31,7 @@ export default function PeakHours() {
                 A QUÉ HORA SE <span className="text-fuego">PONE BUENO</span>
               </h2>
             </div>
-            <div className="flex flex-wrap items-center justify-center gap-2.5 md:justify-start">
+            <div className="flex flex-wrap items-center justify-center gap-2.5 lg:justify-start">
               <span className="rounded-full border border-fuego/40 bg-fuego/10 px-3.5 py-1.5 text-xs font-extrabold text-fuego">
                 Miércoles · día de muestra
               </span>
@@ -72,11 +72,11 @@ export default function PeakHours() {
             </div>
 
             <div className="mt-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-              <p className="flex items-start justify-center gap-3 text-center font-marker text-lg text-oro md:justify-start md:text-left md:text-xl">
+              <p className="flex items-start justify-center gap-3 text-center font-marker text-lg text-oro md:text-xl lg:justify-start lg:text-left">
                 <Flame className="animate-flicker mt-1 h-5 w-5 shrink-0 text-fuego" />
                 8–10 p.m. es la hora buena: llega temprano o toca compartir la mesa.
               </p>
-              <div className="flex flex-wrap items-center justify-center gap-4 text-[11px] font-bold text-ceniza md:justify-start">
+              <div className="flex flex-wrap items-center justify-center gap-4 text-[11px] font-bold text-ceniza lg:justify-start">
                 <span className="flex items-center gap-1.5">
                   <span className="h-2.5 w-2.5 rounded-sm" style={{ background: "var(--color-fuego)" }} />
                   Lleno total
