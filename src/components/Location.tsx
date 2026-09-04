@@ -22,7 +22,7 @@ export default function Location() {
   return (
     <section id="ubicacion" className="scroll-mt-24 border-t border-crema/10 py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-5">
-        <Reveal>
+        <Reveal className="text-center lg:text-left">
           <p className="mb-3 inline-block rotate-[-2deg] font-marker text-lg text-oro">
             aquí nos encuentras
           </p>
@@ -35,7 +35,7 @@ export default function Location() {
           {/* info */}
           <Reveal>
             <div className="flex h-full flex-col rounded-[24px] border border-crema/10 bg-coal p-7 md:p-9">
-              <div className="flex items-center gap-2.5">
+              <div className="flex items-center justify-center gap-2.5 sm:justify-start">
                 <span className="relative flex h-2.5 w-2.5">
                   <span
                     className="absolute inline-flex h-full w-full rounded-full bg-verde opacity-75"
@@ -117,7 +117,7 @@ export default function Location() {
                 ))}
               </ul>
 
-              <div className="mt-5 flex flex-wrap items-center gap-2.5">
+              <div className="mt-5 flex flex-wrap items-center justify-center gap-2.5 sm:justify-start">
                 <span className="flex items-center gap-1.5 rounded-full border border-crema/15 px-3.5 py-1.5 text-xs font-bold text-humo">
                   <Plate className="h-3.5 w-3.5 text-chile" /> Consumo en el lugar
                 </span>
@@ -126,7 +126,7 @@ export default function Location() {
                 </span>
               </div>
 
-              <div className="mt-7 flex flex-wrap gap-3.5">
+              <div className="mt-7 flex flex-wrap justify-center gap-3.5 sm:justify-start">
                 <a
                   href={PHONE_TEL}
                   className="group flex items-center gap-2.5 rounded-full bg-fuego px-6 py-3.5 font-extrabold text-crema shadow-[0_14px_36px_-10px_rgba(255,77,36,.6)] transition-all duration-300 hover:bg-brasa hover:-translate-y-0.5"

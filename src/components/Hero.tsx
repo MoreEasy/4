@@ -50,9 +50,9 @@ export default function Hero() {
 
       <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-5 lg:grid-cols-12 lg:gap-10">
         {/* ------- left: words ------- */}
-        <div className="lg:col-span-7">
+        <div className="text-center sm:text-left lg:col-span-7">
           <Reveal>
-            <p className="flex flex-wrap items-center gap-x-3 gap-y-2 text-xs md:text-sm font-bold tracking-[0.22em] uppercase text-humo">
+            <p className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-xs md:text-sm font-bold tracking-[0.22em] uppercase text-humo sm:justify-start">
               <span className="flex items-center gap-1.5 text-fuego">
                 <Pin className="h-4 w-4" /> Santo Domingo Este
               </span>
@@ -98,7 +98,7 @@ export default function Hero() {
           </Reveal>
 
           <Reveal delay={380}>
-            <p className="mt-8 max-w-xl text-base md:text-lg leading-relaxed text-humo">
+            <p className="mx-auto mt-8 max-w-xl text-base md:text-lg leading-relaxed text-humo sm:mx-0">
               Alitas glaseadas, papas suprema, mofongo y la{" "}
               <span className="font-bold text-crema">salsita de la casa que no perdona</span>. Sabor
               callejero de verdad, a precio de barrio y con la puerta abierta hasta la medianoche.
@@ -107,7 +107,7 @@ export default function Hero() {
 
           {/* chips */}
           <Reveal delay={460}>
-            <div className="mt-7 flex flex-wrap items-center gap-2.5">
+            <div className="mt-7 flex flex-wrap items-center justify-center gap-2.5 sm:justify-start">
               <span className="flex items-center gap-1.5 rounded-full border border-oro/40 bg-oro/10 px-3.5 py-1.5 text-xs font-extrabold text-oro transition-colors hover:bg-oro/20">
                 <Star className="h-3.5 w-3.5" />
                 {RATING} · {REVIEW_COUNT} opiniones
@@ -125,7 +125,7 @@ export default function Hero() {
 
           {/* CTAs */}
           <Reveal delay={540}>
-            <div className="mt-9 flex flex-wrap items-center gap-4">
+            <div className="mt-9 flex flex-wrap items-center justify-center gap-4 sm:justify-start">
               <a
                 href="#menu"
                 className="group flex items-center gap-3 rounded-full bg-fuego px-7 py-3.5 font-extrabold text-crema shadow-[0_14px_36px_-10px_rgba(255,77,36,.65)] transition-all duration-300 hover:bg-brasa hover:-translate-y-0.5"

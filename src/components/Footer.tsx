@@ -20,7 +20,7 @@ export default function Footer() {
 
       <div className="mx-auto max-w-7xl px-5 py-16 md:py-20">
         <div className="grid gap-12 lg:grid-cols-12">
-          <Reveal className="lg:col-span-6">
+          <Reveal className="text-center lg:col-span-6 lg:text-left">
             <p className="inline-block -rotate-2 font-marker text-lg text-oro">no digas que no te avisamos</p>
             <p className="mt-3 font-display leading-[0.9] tracking-wide text-5xl sm:text-6xl md:text-8xl">
               ¿SE TE
@@ -35,14 +35,14 @@ export default function Footer() {
               {PHONE_DISPLAY}
               <Arrow className="h-7 w-7 transition-transform duration-300 group-hover:translate-x-2 md:h-9 md:w-9" />
             </a>
-            <p className="mt-4 max-w-sm text-sm leading-relaxed text-humo">
+            <p className="mx-auto mt-4 max-w-sm text-sm leading-relaxed text-humo lg:mx-0">
               Llama, pide y pasa buscando. O quédate en la esquina a comer con la familia — aquí
               siempre hay mesa y nunca falta la salsita.
             </p>
           </Reveal>
 
           <div className="grid gap-10 sm:grid-cols-3 lg:col-span-6">
-            <Reveal delay={100}>
+            <Reveal delay={100} className="text-center sm:text-left">
               <h3 className="font-display text-lg tracking-widest text-fuego">MENÚ</h3>
               <ul className="mt-4 space-y-2.5 text-sm font-semibold text-humo">
                 {[
@@ -59,7 +59,7 @@ export default function Footer() {
                 ))}
               </ul>
             </Reveal>
-            <Reveal delay={180}>
+            <Reveal delay={180} className="text-center sm:text-left">
               <h3 className="font-display text-lg tracking-widest text-fuego">HORARIO</h3>
               <ul className="mt-4 space-y-2.5 text-sm font-semibold text-humo">
                 <li>Lunes a Domingo</li>
@@ -67,22 +67,22 @@ export default function Footer() {
                 <li className="text-xs text-ceniza">Cierra a las 12 a.m. en punto… casi siempre.</li>
               </ul>
             </Reveal>
-            <Reveal delay={260}>
+            <Reveal delay={260} className="text-center sm:text-left">
               <h3 className="font-display text-lg tracking-widest text-fuego">CONTACTO</h3>
               <ul className="mt-4 space-y-3.5 text-sm font-semibold text-humo">
-                <li className="flex items-start gap-2.5">
+                <li className="flex items-start justify-center gap-2.5 sm:justify-start">
                   <Pin className="mt-0.5 h-4 w-4 shrink-0 text-fuego" />
                   <a href={MAPS_URL} target="_blank" rel="noreferrer" className="link-line hover:text-crema">
                     {ADDRESS}
                   </a>
                 </li>
-                <li className="flex items-start gap-2.5">
+                <li className="flex items-start justify-center gap-2.5 sm:justify-start">
                   <PhoneIcon className="mt-0.5 h-4 w-4 shrink-0 text-fuego" />
                   <a href={PHONE_TEL} className="link-line hover:text-crema">
                     {PHONE_DISPLAY}
                   </a>
                 </li>
-                <li className="flex items-start gap-2.5">
+                <li className="flex items-start justify-center gap-2.5 sm:justify-start">
                   <Instagram className="mt-0.5 h-4 w-4 shrink-0 text-fuego" />
                   <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="link-line hover:text-crema">
                     {INSTAGRAM_HANDLE}

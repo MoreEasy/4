@@ -8,7 +8,7 @@ export default function Pizarra() {
       <div className="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-12">
         {/* sticky intro */}
         <div className="lg:col-span-4">
-          <div className="lg:sticky lg:top-28">
+          <div className="text-center lg:sticky lg:top-28 lg:text-left">
             <Reveal>
               <p className="mb-3 inline-block -rotate-2 font-marker text-lg text-oro">
                 el menú completo
@@ -17,13 +17,13 @@ export default function Pizarra() {
                 <span className="block">LA</span>
                 <span className="block text-outline">PIZARRA</span>
               </h2>
-              <p className="mt-6 max-w-xs text-sm leading-relaxed text-humo">
+              <p className="mx-auto mt-6 max-w-xs text-sm leading-relaxed text-humo lg:mx-0">
                 Todo lo que sale de la cocina, con precios en pesos dominicanos. Si no está aquí,
                 pregúntale al muchacho del mostrador — casi seguro lo conseguimos.
               </p>
 
               {/* spice legend */}
-              <div className="mt-8 space-y-2.5 border-l-2 border-fuego/50 pl-4">
+              <div className="mx-auto mt-8 w-fit space-y-2.5 border-l-2 border-fuego/50 pl-4 text-left lg:mx-0">
                 {[
                   { n: 1, t: "Suave — sabor sin susto" },
                   { n: 2, t: "Medio — calienta bonito" },
@@ -42,7 +42,7 @@ export default function Pizarra() {
 
               <a
                 href={PHONE_TEL}
-                className="group mt-9 inline-flex items-center gap-3 rounded-full bg-fuego px-6 py-3.5 font-extrabold text-crema shadow-[0_14px_36px_-10px_rgba(255,77,36,.6)] transition-all duration-300 hover:bg-brasa hover:-translate-y-0.5"
+                className="group mx-auto mt-9 flex w-fit items-center gap-3 rounded-full bg-fuego px-6 py-3.5 font-extrabold text-crema shadow-[0_14px_36px_-10px_rgba(255,77,36,.6)] transition-all duration-300 hover:bg-brasa hover:-translate-y-0.5 lg:mx-0"
               >
                 <PhoneIcon className="h-4.5 w-4.5" />
                 {PHONE_DISPLAY}

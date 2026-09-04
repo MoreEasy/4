@@ -24,7 +24,7 @@ export default function Reviews() {
         }}
       />
       <div className="relative mx-auto max-w-7xl px-5">
-        <Reveal>
+        <Reveal className="text-center md:text-left">
           <p className="mb-3 inline-block -rotate-2 font-marker text-lg text-oro">el barrio habla</p>
           <h2 className="mb-14 font-display text-4xl leading-[0.92] tracking-wide sm:text-5xl md:text-7xl">
             LO QUE DICEN <span className="text-fuego">DE NOSOTROS</span>
@@ -34,11 +34,11 @@ export default function Reviews() {
         <div className="grid gap-10 lg:grid-cols-12">
           {/* summary */}
           <Reveal className="min-w-0 lg:col-span-5">
-            <div className="h-full rounded-[24px] border border-crema/10 bg-coal p-7 md:p-9">
-              <div className="flex items-end gap-4 sm:gap-5">
+            <div className="h-full rounded-[24px] border border-crema/10 bg-coal p-7 text-center md:p-9 sm:text-left">
+              <div className="flex items-end justify-center gap-4 sm:justify-start sm:gap-5">
                 <span className="font-display text-6xl leading-none text-crema sm:text-8xl md:text-[92px]">{RATING}</span>
                 <div className="min-w-0 pb-2">
-                  <div className="flex gap-1">
+                  <div className="flex justify-center gap-1 sm:justify-start">
                     {Array.from({ length: 5 }).map((_, i) => (
                       <Star key={i} className="h-4 w-4 sm:h-5 sm:w-5 text-oro" />
                     ))}
@@ -130,7 +130,7 @@ export default function Reviews() {
               </Reveal>
             ))}
 
-            <Reveal delay={380}>
+            <Reveal delay={380} className="text-center sm:text-left">
               <a
                 href={MAPS_URL}
                 target="_blank"

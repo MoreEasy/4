@@ -20,18 +20,18 @@ export default function SpiceMeter() {
       />
 
       <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-5 lg:grid-cols-2">
-        <Reveal>
+        <Reveal className="text-center lg:text-left">
           <p className="mb-3 inline-block rotate-[-2deg] font-marker text-lg text-oro">
             el termómetro de la casa
           </p>
           <h2 className="font-display text-4xl leading-[0.92] tracking-wide sm:text-5xl md:text-7xl">
             ¿CUÁNTO <span className="text-fuego">AGUANTAS?</span>
           </h2>
-          <p className="mt-6 max-w-md text-base leading-relaxed text-humo">
+          <p className="mx-auto mt-6 max-w-md text-base leading-relaxed text-humo lg:mx-0">
             Aquí el picante se respeta. Toda la comida sale al nivel que tú pidas, y la famosa
             salsita de la casa se prepara en cinco intensidades. Toca un ají y elige tu bando.
           </p>
-          <div className="mt-8 flex max-w-md items-start gap-3 rounded-xl border border-crema/10 bg-carbon/60 p-4">
+          <div className="mx-auto mt-8 flex max-w-md items-start justify-center gap-3 rounded-xl border border-crema/10 bg-carbon/60 p-4 text-center lg:mx-0 lg:justify-start lg:text-left">
             <Flame className="animate-flicker mt-0.5 h-5 w-5 shrink-0 text-fuego" />
             <p className="text-sm leading-relaxed text-ceniza">
               <span className="font-bold text-crema">Dato de la casa:</span> la salsita es cortesía
@@ -82,12 +82,12 @@ export default function SpiceMeter() {
 
             <div className="mt-7">
               <p
-                className="font-display text-[1.75rem] tracking-wide transition-colors duration-500 sm:text-4xl md:text-5xl"
+                className="text-center font-display text-[1.75rem] tracking-wide transition-colors duration-500 sm:text-4xl md:text-5xl lg:text-left"
                 style={{ color: current.color }}
               >
                 {current.name.toUpperCase()}
               </p>
-              <p className="mt-2 min-h-[3.5rem] font-marker text-lg text-humo md:text-xl">
+              <p className="mt-2 min-h-[3.5rem] text-center font-marker text-lg text-humo md:text-xl lg:text-left">
                 {current.msg}
               </p>
             </div>
