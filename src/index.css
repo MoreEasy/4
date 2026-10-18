@@ -1,0 +1,280 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Anton", "Impact", "Arial Narrow", sans-serif;
+  --font-body: "Manrope", "Segoe UI", sans-serif;
+  --font-marker: "Permanent Marker", "Comic Sans MS", cursive;
+
+  --color-carbon: #16100b;
+  --color-coal: #201711;
+  --color-lena: #2c1e14;
+  --color-humo: #c7b09a;
+  --color-ceniza: #8f7a66;
+  --color-crema: #fff3e0;
+  --color-fuego: #ff4d24;
+  --color-brasa: #d92e12;
+  --color-chile: #ff8a2a;
+  --color-oro: #ffc043;
+  --color-verde: #a8c858;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: clip;
+}
+
+body {
+  background-color: var(--color-carbon);
+  color: var(--color-crema);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-fuego);
+  color: var(--color-crema);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-carbon);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-lena);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-fuego);
+}
+
+/* ---- grain / noise overlay ---- */
+.noise::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  pointer-events: none;
+  opacity: 0.06;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ---- outline display text ---- */
+.text-outline {
+  color: transparent;
+  -webkit-text-stroke: 1.5px color-mix(in srgb, var(--color-fuego) 60%, transparent);
+}
+.text-outline-crema {
+  color: transparent;
+  -webkit-text-stroke: 1.5px color-mix(in srgb, var(--color-crema) 25%, transparent);
+}
+
+/* ---- keyframes ---- */
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes marquee-rev {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes drift {
+  0%,
+  100% {
+    transform: translateY(0) rotate(var(--r, 0deg));
+  }
+  50% {
+    transform: translateY(-16px) rotate(calc(var(--r, 0deg) + 7deg));
+  }
+}
+@keyframes flicker {
+  0%,
+  100% {
+    transform: scaleY(1) scaleX(1);
+    opacity: 1;
+  }
+  30% {
+    transform: scaleY(0.9) scaleX(1.06);
+    opacity: 0.82;
+  }
+  60% {
+    transform: scaleY(1.08) scaleX(0.95);
+    opacity: 0.95;
+  }
+}
+@keyframes kenburns {
+  from {
+    transform: scale(1) translate(0, 0);
+  }
+  to {
+    transform: scale(1.1) translate(-1.6%, -1.6%);
+  }
+}
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.55);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1.9);
+    opacity: 0;
+  }
+}
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+.animate-marquee-rev {
+  animation: marquee-rev 24s linear infinite;
+}
+.marquee-hover:hover .animate-marquee,
+.marquee-hover:hover .animate-marquee-rev {
+  animation-play-state: paused;
+}
+.animate-drift {
+  animation: drift 7s ease-in-out infinite;
+}
+.animate-flicker {
+  animation: flicker 1s ease-in-out infinite;
+  transform-origin: 50% 100%;
+}
+.animate-kenburns {
+  animation: kenburns 16s ease-in-out infinite alternate;
+}
+.animate-spin-slow {
+  animation: spin-slow 18s linear infinite;
+}
+.animate-bob {
+  animation: bob 2.2s ease-in-out infinite;
+}
+
+/* ---- scroll reveals ---- */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--d, 0ms);
+}
+
+.mask {
+  overflow: hidden;
+}
+.mask-inner {
+  display: block;
+  transform: translateY(112%);
+}
+.in-view .mask-inner {
+  transform: translateY(0);
+  transition: transform 1.05s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--d, 0ms);
+}
+
+.grow-x {
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+.in-view .grow-x {
+  transform: scaleX(1);
+  transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--d, 0ms);
+}
+
+/* ---- review postcards: straight on phones, tilted from sm up ---- */
+.postcard {
+  transform: none;
+}
+@media (min-width: 1024px) {
+  .postcard {
+    transform: rotate(var(--rot, 0deg));
+  }
+}
+
+/* ---- dotted price leaders ---- */
+.dots {
+  flex: 1;
+  margin: 0 0.6rem 0.4em;
+  border-bottom: 2px dotted color-mix(in srgb, var(--color-crema) 22%, transparent);
+}
+
+/* ---- underline grow for nav links ---- */
+.link-line {
+  position: relative;
+}
+.link-line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 100%;
+  background: var(--color-fuego);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.link-line:hover::after,
+.link-line:focus-visible::after {
+  transform: scaleX(1);
+}
+
+/* ---- reduced motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-marquee,
+  .animate-marquee-rev,
+  .animate-drift,
+  .animate-flicker,
+  .animate-kenburns,
+  .animate-spin-slow,
+  .animate-bob {
+    animation: none !important;
+  }
+  .reveal,
+  .mask-inner,
+  .grow-x,
+  .postcard {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
